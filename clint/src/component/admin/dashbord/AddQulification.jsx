@@ -18,7 +18,7 @@ const AddQualification = () => {
   useEffect(() => {
     const fetchQualifications = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:5050/api/');
+        const response = await axios.get('https://protfolio-backend-e4wv.onrender.com/api/');
         const groupedQualifications = {
           education: response.data.filter(item => item.type === 'education'),
           experience: response.data.filter(item => item.type === 'experience'),
@@ -52,7 +52,7 @@ const AddQualification = () => {
         training: selectedQualifications.training,
       };
       const token = Cookies.get('token');
-      const response = await axios.post('http://127.0.0.1:5050/api/qualification/add', payload,{
+      const response = await axios.post('https://protfolio-backend-e4wv.onrender.com/api/qualification/add', payload,{
         headers: {
             'Authorization': `Bearer ${token}`,
         },

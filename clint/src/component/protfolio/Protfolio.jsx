@@ -15,7 +15,7 @@ const Protfolio = () => {
   useEffect(() => {
       const fetchHeroData = async () => {
           try {
-              const response = await axios.get("http://127.0.0.1:5050/protfolio/");
+              const response = await axios.get("https://protfolio-backend-e4wv.onrender.com/protfolio/");
               setHeroData(response.data);
               
           } catch (error) {

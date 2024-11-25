@@ -15,7 +15,7 @@ const AddSkill = () => {
     };
 
     try {
-      const response = await axios.post('http://127.0.0.1:5050/skill/add', skillData,{
+      const response = await axios.post('https://protfolio-backend-e4wv.onrender.com/skill/add', skillData,{
         headers: {
             'Authorization': `Bearer ${token}`,
         },

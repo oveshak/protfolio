@@ -22,7 +22,7 @@ const AddEntity = () => {
         };
 
         try {
-            const response = await axios.post('http://127.0.0.1:5050/api/add', newEntity, {
+            const response = await axios.post('https://protfolio-backend-e4wv.onrender.com/api/add', newEntity, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

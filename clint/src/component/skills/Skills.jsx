@@ -15,7 +15,7 @@ const Skills = () => {
   useEffect(() => {
     const fetchHeroData = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:5050/skill");
+        const response = await axios.get("https://protfolio-backend-e4wv.onrender.com/skill");
         
 
         // Filter data based on type and set frontend and backend states

@@ -35,7 +35,7 @@ const AddContactInfo = () => {
   
     try {
        
-      const response = await axios.post('http://127.0.0.1:5050/contact/add', contactData, {
+      const response = await axios.post('https://protfolio-backend-e4wv.onrender.com/contact/add', contactData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

@@ -30,7 +30,7 @@ const AddPortfolio = () => {
     formData.append('subtitle', subtitle);
 
     try {
-      const response = await axios.post('http://127.0.0.1:5050/protfolio/add', formData, {
+      const response = await axios.post('https://protfolio-backend-e4wv.onrender.com/protfolio/add', formData, {
         headers: {
             'Authorization': `Bearer ${token}`,
         },

@@ -27,7 +27,7 @@ const AddAbout = () => {
     formData.append('cv_url', cvUrl);
 
     try {
-      const response = await axios.post('http://127.0.0.1:5050/about/add', formData, {
+      const response = await axios.post('https://protfolio-backend-e4wv.onrender.com/about/add', formData, {
         headers: {
             'Authorization': `Bearer ${token}`,
         },
