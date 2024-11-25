@@ -13,7 +13,7 @@ const About = () => {
   useEffect(() => {
       const fetchHeroData = async () => {
           try {
-              const response = await axios.get(`${getBaseUrl()}/about`);
+              const response = await axios.get("https://protfolio-backend-e4wv.onrender.com/about");
               setHeroData(response.data[0]);
               
           } catch (error) {
