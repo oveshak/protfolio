@@ -34,7 +34,7 @@ const AddHero = () => {
         if (image) data.append("image", image);
 
         try {
-            const response = await axios.post("https://protfolio-backend-e4wv.onrender.com/home/add", data, {
+            const response = await axios.post("http://127.0.0.1:5050/home/add", data, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                 },

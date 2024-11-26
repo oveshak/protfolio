@@ -6,7 +6,7 @@ const port = process.env.port || 5000;
 const hostname='http://127.0.0.1:' ;
 import dotenv from 'dotenv'
 import connectdb from './utils/db.js';
-
+import path from 'path'
 
 dotenv.config({})
 
@@ -19,6 +19,8 @@ const corsOptions = {
     credentials: true
 }
 app.use(cors(corsOptions));
+const _dirname=path.resolve();
+
 
 
 import userRouter from './router/user.router.js'
@@ -35,6 +37,11 @@ app.use('/skill', skillRouter)
 app.use('/protfolio', protfolioRouter)
 app.use('/api', qulificationRouter)
 app.use('/contact',contactRouter)
+
+app.use(express.static(path.join(_dirname, "/clint/dist")))
+app.get('*',(_,res)=>{
+  res.sendFile(path.resolve(_dirname, "clint","dist","index.html"));
+})
 
 app.listen(port, () => {
     connectdb()

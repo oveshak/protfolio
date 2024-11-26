@@ -29,7 +29,7 @@ const GetAllMessage = () => {
     const deleteMessage = async (id) => {
  
         try {
-            await axios.delete(`https://protfolio-backend-e4wv.onrender.com/contact/contact-message/${id}`, {
+            await axios.delete(`http://127.0.0.1:5050/contact/contact-message/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

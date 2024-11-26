@@ -69,7 +69,7 @@ const Qualification = () => {
   useEffect(() => {
     const fetchQualifications = async () => {
       try {
-        const response = await axios.get('https://protfolio-backend-e4wv.onrender.com/api/qualification');
+        const response = await axios.get('http://127.0.0.1:5050/api/qualification');
         setQualifications(response.data); // Assuming the API returns an array of qualifications
       } catch (err) {
         setError('Failed to fetch qualifications. Please try again.');

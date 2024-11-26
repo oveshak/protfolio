@@ -4,7 +4,6 @@ import {
   } from "react-router-dom";
 import App from "../App";
 import Login from "../component/admin/login/Login";
-import PrivateRoute from "./PrivateRouter";
 import Dashbord from "../component/admin/dashbord/Dashbord";
 import AddHero from "../component/admin/dashbord/AddHero";
 import AddAbout from "../component/admin/dashbord/AddAbout";
@@ -43,27 +42,27 @@ import AddQulification from "../component/admin/dashbord/AddQulification";
     {
       
       path: '/dashboard',
-      element: <PrivateRoute><Dashbord/></PrivateRoute>,
+      element: <Dashbord/>,
       children: [
   {path: '/dashboard/addhero',
-element: <PrivateRoute><AddHero/></PrivateRoute>,},
+element: <AddHero/>,},
          {path: '/dashboard/addabout',
-element: <PrivateRoute><AddAbout/></PrivateRoute>,},
+element: <AddAbout/>,},
 
 {path: '/dashboard/addskill',
-  element: <PrivateRoute><AddSkill/></PrivateRoute>,},
+  element: <AddSkill/>,},
 {path: '/dashboard/addprotfolio',
-  element: <PrivateRoute><AddProtfolio/></PrivateRoute>,},
+  element: <AddProtfolio/>,},
 {path: '/dashboard/addcontactinfo',
-  element: <PrivateRoute><AddContactInfo/></PrivateRoute>,},
+  element: <AddContactInfo/>,},
   {path: '/dashboard/getallmessage',
-    element: <PrivateRoute><GetAllMessage/></PrivateRoute>,},
+    element: <GetAllMessage/>,},
 
 
     {path: '/dashboard/add',
-      element: <PrivateRoute><AddEntity/></PrivateRoute>,},
+      element: <AddEntity/>,},
 {path: '/dashboard/addqulification',
-      element: <PrivateRoute><AddQulification/></PrivateRoute>,},
+      element: <AddQulification/>,},
 
 
       ]

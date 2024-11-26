@@ -1,3 +1,3 @@
 export const getBaseUrl =()=>{
-    return "https://protfolio-backend-e4wv.onrender.com"
+    return "http://127.0.0.1:5050"
 }
